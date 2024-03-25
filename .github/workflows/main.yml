@@ -37,7 +37,7 @@ jobs:
           SOURCE: "build/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: '~/blog'
+          TARGET: '/home/blog'
           EXCLUDE: "/build/"
           SCRIPT_BEFORE: |
             whoami
