@@ -36,6 +36,6 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.REMOTE_SSH_KEY }}
           port: 22
-          source: '/build'
+          source: 'build/*'
           target: '/root/blog'
 
