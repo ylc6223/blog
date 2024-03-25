@@ -30,7 +30,7 @@ jobs:
         run: echo npm 构建成功，请访问 http://8.134.54.104
 
       - name: copy file via ssh password
-        uses: appleboy/scp-action@v0.0.1
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
