@@ -1,4 +1,4 @@
- # action名称
+# action名称
 name: deploy-website
 
 # 当代码合并到master分支的时候，执行下列脚本
@@ -7,7 +7,7 @@ on:
     branches: [master]
 # 任务
 jobs:
-# docs-build为任务id可随意定义
+  # docs-build为任务id可随意定义
   docs-build:
     runs-on: ubuntu-latest
     steps:
@@ -18,24 +18,24 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: "18.X"
-         # registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish
+          # registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish
 
-      - name: 安装依赖 
+      - name: 安装依赖
         run: npm install
 
       - name: 构建dist
         run: npm run docs:build
-        
+
       - name: build 成功通知
-        run: echo npm 构建成功，请访问 http://8.134.54.104  
+        run: echo npm 构建成功，请访问 http://8.134.54.104
 
       - name: copy file via ssh password
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: ${{ secrets.SOURCE }}
-          target: ${{ secrets.TARGET }}
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.REMOTE_SSH_KEY }}
+          port: 22
+          source: '/build'
+          target: '/root/blog'
 
