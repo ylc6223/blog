@@ -37,7 +37,7 @@ jobs:
           SOURCE: "build/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: '~/blog'
+          TARGET: '/www/server/nginx/html/blog'
           EXCLUDE: "/build/, /node_modules/"
           SCRIPT_BEFORE: |
             whoami
