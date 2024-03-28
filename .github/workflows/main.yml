@@ -35,7 +35,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_KEY }}
           ARGS: "-rlgoDzvc -i"
           SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_HK }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: '/www/server/nginx/html/blog'
           EXCLUDE: "/build/, /node_modules/"
