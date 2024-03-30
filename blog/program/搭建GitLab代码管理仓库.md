@@ -1,8 +1,8 @@
 ---
 slug: gitlab-code-management-environment
 title: 搭建GitLab代码管理仓库
-date: 2022-04-15
-authors: kuizuo
+date: 2023-04-15
+authors: jerry
 tags: [git, gitlab]
 keywords: [git, gitlab]
 description: 搭建 GitLab 代码管理仓库，用于管理代码
@@ -213,7 +213,7 @@ gitlab-ctl start
 
 ```js
 // 原仓库git
-https://github.com/kuizuo/blog
+https://github.com/ylc6223/blog
 // 在https://后加上username@
 https://kuizuo@github.com/kuizuo/blog
 ```

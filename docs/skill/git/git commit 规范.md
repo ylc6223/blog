@@ -2,8 +2,8 @@
 id: git-conmit-specification
 slug: git-conmit-specification
 title: git commit 规范
-date: 2021-08-31
-authors: kuizuo
+date: 2022-08-31
+authors: jerry
 tags: [git, commit]
 keywords: [git, commit]
 ---

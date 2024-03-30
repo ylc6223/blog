@@ -1,8 +1,8 @@
 ---
 slug: use-github-action-to-auto-deploy
 title: 使用Github Action自动化部署
-date: 2022-05-11
-authors: kuizuo
+date: 2023-05-11
+authors: jerry
 tags: [github, git]
 keywords: [github, git]
 ---

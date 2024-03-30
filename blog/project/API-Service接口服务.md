@@ -1,8 +1,8 @@
 ---
 slug: use-nuxt3-build-api-server
 title: api-service 接口服务
-date: 2022-07-20
-authors: kuizuo
+date: 2023-07-20
+authors: jerry
 tags: [nuxt, vite, vue, ssr]
 keywords: [nuxt, vite, vue, ssr]
 description: 基于 Nuxt3 的 API 接口服务网站，易于封装，调用，部署。
@@ -14,7 +14,7 @@ sticky: 2
 
 在线地址: [API-Service](https://api.kuizuo.cn)
 
-开源地址: [kuizuo/api-service](https://github.com/kuizuo/api-service)
+开源地址: [kuizuo/api-service](https://github.com/ylc6223/api-service)
 
 <!-- truncate -->
 

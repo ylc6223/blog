@@ -2,8 +2,8 @@
 id: vue-reactive-data-array
 slug: /vue-reactive-data-array
 title: Vue响应式数据之Array
-date: 2022-05-12
-authors: kuizuo
+date: 2023-05-12
+authors: jerry
 tags: [vue, javascript]
 keywords: [vue, javascript]
 ---

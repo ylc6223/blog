@@ -1,8 +1,8 @@
 ---
 slug: axios-http-class-library
 title: 基于Axios封装HTTP类库
-date: 2021-08-26
-authors: kuizuo
+date: 2022-08-26
+authors: jerry
 tags: [node, http, axios]
 keywords: [node, http, axios]
 description: 基于 Axios 封装 HTTP 类库，并发布到 npm 仓库中
@@ -12,7 +12,7 @@ description: 基于 Axios 封装 HTTP 类库，并发布到 npm 仓库中
 
 一个基于 Axios 封装 HTTP 类库
 
-源代码 [kz-http](https://github.com/kuizuo/kz-http)
+源代码 [kz-http](https://github.com/ylc6223/kz-http)
 
 ## 使用方法
 
@@ -173,7 +173,7 @@ http.instance.interceptors.request.use(
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kuizuo/kz-http.git"
+    "url": "git+https://github.com/ylc6223/kz-http.git"
   },
   "keywords": ["node", "axios", "http"]
 }

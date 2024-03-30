@@ -2,8 +2,8 @@
 id: typescript-advanced-grammar
 slug: /typescript-advanced-grammar
 title: TypeScript高级语法
-date: 2022-06-25
-authors: kuizuo
+date: 2023-06-25
+authors: jerry
 tags: [typescript]
 keywords: [typescript]
 ---

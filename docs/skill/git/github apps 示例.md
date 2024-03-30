@@ -2,8 +2,8 @@
 id: github-apps-example
 slug: github-apps-example
 title: github apps示例
-date: 2021-10-01
-authors: kuizuo
+date: 2022-10-01
+authors: jerry
 tags: [github, app]
 keywords: [github, app]
 ---

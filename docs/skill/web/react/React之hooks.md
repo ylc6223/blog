@@ -2,8 +2,8 @@
 id: react-hooks
 slug: /react-hooks
 title: React之hooks
-date: 2022-09-07
-authors: kuizuo
+date: 2023-09-07
+authors: jerry
 tags: [react, hook]
 keywords: [react, hook]
 ---
