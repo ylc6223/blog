@@ -1,8 +1,8 @@
 ---
 slug: vercel-deploy-blog
 title: Vercel部署个人博客
-date: 2022-05-11
-authors: kuizuo
+date: 2023-05-11
+authors: jerry
 tags: [vercel, blog]
 keywords: [vercel, blog]
 description: 使用 Vercel 部署个人博客过程记录，简单方便、访问快、免费部署。
@@ -51,7 +51,7 @@ image: https://img.kuizuo.cn/image-20220511170700075.png
 
 这里可以从已有的 git repository 中导入，也可以选择一个模板。
 
-这里登录我的 Github 账号选择仓库，然后点击 blog 仓库旁的 Import 即可。当然，你也可以直接拉取我的仓库，仓库地址：[kuizuo/blog](https://github.com/kuizuo/blog)
+这里登录我的 Github 账号选择仓库，然后点击 blog 仓库旁的 Import 即可。当然，你也可以直接拉取我的仓库，仓库地址：[kuizuo/blog](https://github.com/ylc6223/blog)
 
 ![image-20220511165513526](https://img.kuizuo.cn/image-20220511165513526.png)
 

@@ -2,7 +2,7 @@
 id: mysql-like-optimization
 slug: /mysql-like-optimization
 title: mysql模糊查询like优化
-date: 2021-01-07
+date: 2022-01-07
 tags: [mysql, database]
 keywords: [mysql, database]
 ---

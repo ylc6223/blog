@@ -2,7 +2,7 @@
 id: docusaurus-deploy
 slug: /docusaurus-deploy
 title: 部署
-authors: kuizuo
+authors: jerry
 ---
 
 我之前使用 [Vercel](https://vercel.com) 一把梭，无需任何配置。这样我就只需要专注输出内容即可。这是我当时使用 Vercel 部署的文章 [Vercel 部署个人博客](/blog/vercel-deploy-blog)
@@ -27,7 +27,7 @@ authors: kuizuo
 
 由于 Vercel 能够自动拉取仓库代码，并自行构建部署，因此通常什么配置都不需要。
 
-由于代码提交到代码仓库(github)，则需要借用 CI 服务来帮助我们完成这些任务，这里我使用了 [Github Action](https://github.com/marketplace) 来帮助我构建，构建记录可以在 [Actions · kuizuo/blog](https://github.com/kuizuo/blog/actions) 中查看。以下是我的配置文件
+由于代码提交到代码仓库(github)，则需要借用 CI 服务来帮助我们完成这些任务，这里我使用了 [Github Action](https://github.com/marketplace) 来帮助我构建，构建记录可以在 [Actions · kuizuo/blog](https://github.com/ylc6223/blog/actions) 中查看。以下是我的配置文件
 
 ```yaml title='.github/workflows/ci.yml' icon='logos:github-actions'
 name: CI

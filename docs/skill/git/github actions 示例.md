@@ -2,8 +2,8 @@
 id: github-actions-example
 slug: github-actions-example
 title: github actions示例
-date: 2021-10-01
-authors: kuizuo
+date: 2022-10-01
+authors: jerry
 tags: [github, action]
 keywords: [github, action]
 ---
@@ -292,5 +292,5 @@ https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.
 示例：
 
 ```
-https://github.com/kuizuo/github-action-example/actions/workflows/ci.yml/badge.svg
+https://github.com/ylc6223/github-action-example/actions/workflows/ci.yml/badge.svg
 ```

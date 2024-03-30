@@ -3,7 +3,7 @@ id: git-push-multiple-remote-repos
 slug: git-push
 title: git 推送多个远程仓库
 date: 2023-11-09
-authors: kuizuo
+authors: jerry
 tags: [git]
 keywords: [git]
 ---
@@ -22,7 +22,7 @@ git remote set-url --add origin 远程仓库地址
 
 ```bash {4}
 [remote "origin"]
-    url = https://github.com/kuizuo/blog.git
+    url = https://github.com/ylc6223/blog.git
     fetch = +refs/heads/*:refs/remotes/origin/*
     url = https://git.kuizuo.cn/kuizuo/blog.git
 ```

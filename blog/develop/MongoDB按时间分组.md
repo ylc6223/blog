@@ -1,8 +1,8 @@
 ---
 slug: mongodb-time-grouping
 title: MongoDB按时间分组
-date: 2021-08-30
-authors: kuizuo
+date: 2022-08-30
+authors: jerry
 tags: [mongodb]
 keywords: [mongodb]
 ---

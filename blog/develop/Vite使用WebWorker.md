@@ -1,8 +1,8 @@
 ---
 slug: vite-webworker
 title: Vite使用WebWorker
-date: 2022-07-26
-authors: kuizuo
+date: 2023-07-26
+authors: jerry
 tags: [vite, webworker]
 keywords: [vite, webworker]
 ---

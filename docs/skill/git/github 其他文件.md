@@ -2,8 +2,8 @@
 id: github-other
 slug: github-other
 title: .github 其他文件
-date: 2021-10-01
-authors: kuizuo
+date: 2022-10-01
+authors: jerry
 tags: [github]
 keywords: [github]
 ---

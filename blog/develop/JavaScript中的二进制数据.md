@@ -1,8 +1,8 @@
 ---
 slug: js-binary-data
 title: JavaScript中的二进制数据
-date: 2022-01-24
-authors: kuizuo
+date: 2023-01-24
+authors: jerry
 tags: [javascript]
 keywords: [javascript]
 ---

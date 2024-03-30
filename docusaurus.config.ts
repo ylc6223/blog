@@ -118,11 +118,11 @@ const config: Config = {
         <p>Copyright © 2022 - PRESENT Jerry Yang Built with Docusaurus.</p>
         `,
     },
-    algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
-    },
+    // algolia: {
+    //   appId: 'SN38QCVK8Y',
+    //   apiKey: '4e1f8774bde7fd79ae23c757a93b6330',
+    //   indexName: 'jerry',
+    // },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,
@@ -151,10 +151,10 @@ const config: Config = {
       ],
     },
     giscus: {
-      repo: 'kuizuo/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+      repo: 'ylc6223/blog',
+      repoId: 'R_kgDOLhO6cg',
       category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
+      categoryId: 'DIC_kwDOLhO6cs4CeVxj',
       theme: 'light',
       darkTheme: 'dark_dimmed',
     } satisfies Partial<GiscusConfig>,
@@ -200,6 +200,27 @@ const config: Config = {
     '@docusaurus/plugin-ideal-image',
     ['docusaurus-plugin-baidu-tongji', { token: 'c9a3849aa75f9c4a4e65f846cd1a5155' }],
     [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        indexDocs: true,//是否为文档页面编制索引
+        indexDocSidebarParentCategories: 0,
+        indexBlog: true,//是否为博客页面编制索引
+        indexPages: false,
+        language: ['en', 'zh'],
+        style: undefined,
+        maxSearchResults: 8,
+        lunr: {
+          tokenizerSeparator: /[\s\-]+/,
+          b: 0.75,
+          k1: 1.2,
+          titleBoost: 5,
+          contentBoost: 1,
+          tagsBoost: 3,
+          parentCategoriesBoost: 2,
+        },
+      },
+    ],
+    [
       '@docusaurus/plugin-pwa',
       {
         debug: process.env.NODE_ENV === 'development',
@@ -216,7 +237,7 @@ const config: Config = {
       {
         path: 'blog',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/ylc6223/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogDescription: '代码人生：编织技术与生活的博客之旅',
         blogSidebarCount: 10,

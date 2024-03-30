@@ -1,8 +1,8 @@
 ---
 slug: use-jsonpath-to-parse-json-data
 title: 使用JSONPath解析json数据
-date: 2021-09-20
-authors: kuizuo
+date: 2022-09-20
+authors: jerry
 tags: [javascript, json, node]
 keywords: [javascript, json, node]
 description: jsonpath 能够帮助我们快速的从json数据中提取想要的数据

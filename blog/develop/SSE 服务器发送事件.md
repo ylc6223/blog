@@ -1,8 +1,8 @@
 ---
 slug: sse-server-send-event
 title: SSE 服务器发送事件
-date: 2022-03-16
-authors: kuizuo
+date: 2023-03-16
+authors: jerry
 tags: [http]
 keywords: [http]
 ---

@@ -2,7 +2,7 @@
 id: husky
 slug: /husky
 title: husky
-authors: kuizuo
+authors: jerry
 keywords: ['code-style', 'husky']
 ---
 

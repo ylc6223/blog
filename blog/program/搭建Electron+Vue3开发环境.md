@@ -1,8 +1,8 @@
 ---
 slug: electron-vue3-development-environment
 title: 搭建Electron+Vue3开发环境
-date: 2022-03-17
-authors: kuizuo
+date: 2023-03-17
+authors: jerry
 tags: [electron, vue, vite]
 keywords: [electron, vue, vite]
 description: 搭建 Electron Vue3 的开发环境，用于编写跨平台应用
