@@ -1,14 +1,13 @@
 ---
 slug: automatic-deploy-blog
 title: 使用Github Actions自动化部署博客
-date: 2024-3-38
+date: 2024-03-28
 authors: jerry
-tags: [CI/CD blog]
-keywords: [CI/CD blog]
+tags: [cicd, blog]
+keywords: [cicd, blog]
 description: 使用 Github Actions 部署个人博客过程记录，简单方便、访问快、支持HTTPS。
 image: https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240402181234492.webp
 ---
-
 
 ![image-20240402181234492](https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240402181234492.webp)
 
@@ -38,7 +37,7 @@ image: https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-2024040218
 
 首先将本地代码推送到Github仓库，进入到仓库主页，点击顶部的Actions标签
 
-![](https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240402182010622.webp)
+![image-20240402182010622](https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240402182010622.webp)
 
 ### 2.2新建工作流，配置 Actions
 
@@ -129,7 +128,7 @@ jobs:
 
 ## 4.启用HTTPS
 
-配置和应用SSL证书 
+配置和应用SSL证书
 
 ### 关于https介绍
 
@@ -151,9 +150,9 @@ jobs:
 
 - (**防止被篡改**)无法**验证报文的完整性**，有可能已**被篡改**
 
-- (**优化SEO**)seo容易受损，不使用https，搜索引擎排名受影响，搜索引擎算法优先考虑加密的https网站， 
+- (**优化SEO**)seo容易受损，不使用https，搜索引擎排名受影响，搜索引擎算法优先考虑加密的https网站，
 
-### SSL 
+### SSL
 
 > secure socket layers （安全套接字层）
 
@@ -195,7 +194,7 @@ jobs:
 
 #### 对称加密
 
-> 通信双方约定好用同一种规则对数据进行加密和解密 ，缺点是如果被第三方破解了规则后，就可以读取数据并进行伪造 
+> 通信双方约定好用同一种规则对数据进行加密和解密 ，缺点是如果被第三方破解了规则后，就可以读取数据并进行伪造
 
 
 
@@ -204,7 +203,7 @@ jobs:
 
 由于加密和解密使用同样规则（简称"密钥"），这被称为["对称加密算法"](https://zh.wikipedia.org/zh-cn/对等加密)，这种加密模式有一个最大弱点：甲方必须把加密规则告诉乙方，否则无法解密。保存和传递密钥，就成了最头疼的问题。
 
-![image-20240329154842455](deploy.assets/image-20240329154842455.png)
+![](https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240329154842455.webp)
 
 #### 非对称加密
 
@@ -232,7 +231,7 @@ jobs:
 
 4.从此以后，双方可以利用密钥X进行对称加密的通信了。
 
-在这个过程中，即使公钥被第三方截获，甚至后续的所有通信都被截获，第三方也无法进行破解。因为第二步利用公钥加密的消息，只有私钥才能解开，所以第三方永远无法知道密钥X是什么。 
+在这个过程中，即使公钥被第三方截获，甚至后续的所有通信都被截获，第三方也无法进行破解。因为第二步利用公钥加密的消息，只有私钥才能解开，所以第三方永远无法知道密钥X是什么。
 
 ![](https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240329181535028.webp)
 
@@ -242,17 +241,17 @@ jobs:
 
 举例来说就是客户端向服务端请求数据，服务端上有一个保险柜(公钥A)和一把钥匙(私钥B)，服务端把保险柜(公钥A)发给客户端，客户端收到保险柜之后，将用来与服务端通信的另外一把保险柜钥匙C放在保险柜(公钥A)里面，保险柜只能使用私钥B打开，自然外界也就无法破解数据，所以说数据是安全的。SSL = 非对称加密+对称加密
 
- ### 身份验证
+### 身份验证
 
 1. 现在加密已经完成了，但还是无法确定通信的双方的真实身份，比如可能会有人利用相似的域名或者网站布局来进行伪造，好在https解决了这个问题 ，因为服务端需要申请SSL证书 ，来证明自己的身份 (**SSL证书就是保存在源服务器的数据文件**)
 
 2. 要让SSL证书生效，就要向CA颁发机构 (**Certificate Authty**)申请，这是一个受到信任的第三方机构，
 
-3. 证书除了表明域名的归属日期等信息外，证书里面还包含了特定的公钥和私钥，简单来说，服务器安装了证书之后 ，用户就可以通过https来进行访问了 
+3. 证书除了表明域名的归属日期等信息外，证书里面还包含了特定的公钥和私钥，简单来说，服务器安装了证书之后 ，用户就可以通过https来进行访问了
 
 浏览器再通过https进行访问，会依据TLS的版本会有不同的变化 ，这里以TLS1.2为例
 
-首先正常的TCP三次握手不变 
+首先正常的TCP三次握手不变
 
 - tcp三次握手以后，客户端发送了client hello给服务端，并告诉服务端支持TLS1.2版本和支持的加密套件
 
@@ -261,17 +260,17 @@ jobs:
 ![](https://cdn.jsdelivr.net/gh/ylc6223/BlogAssets@main/imgs/image-20240329183434712.webp)
 
 -  然后生成一个随机数发给服务端
-- 服务端收到客户端的消息，发送server hello给服务端 ，在响应报文里面会告诉客户端 ，服务端确认的支持的TLS版本以及选择的加密套件(选哪一种算法) ，并且也生成一个随机数发 给客户端 
-- 服务端再发一个响应出示自己所持有的证书，这样浏览器件可以根据对照自己的证书信任列表来确认服务器是否可信 
+- 服务端收到客户端的消息，发送server hello给服务端 ，在响应报文里面会告诉客户端 ，服务端确认的支持的TLS版本以及选择的加密套件(选哪一种算法) ，并且也生成一个随机数发 给客户端
+- 服务端再发一个响应出示自己所持有的证书，这样浏览器件可以根据对照自己的证书信任列表来确认服务器是否可信
 - 紧接着服务器再把公钥发给客户端 （server key exchange ） ，（如果服务器也想要客户端的证书会在这里发出请求，比如登陆网银 ）
-- 通知客户端通讯完成 ，发送server hello done 
+- 通知客户端通讯完成 ，发送server hello done
 
 
 
 - 截止到目前这些请求和响应依旧未进行加密
--  client key exchange现在轮到客户端来处理这些问题 ，客户端会生成第三个随机数 ，也叫预主密钥，用前面收到的来自服务端的公钥进行加密 ，并且把加密后的随机数 发送给服务端 
--  告诉服务器，往后的数据用商议好的加密套件（算法）和预主密钥来加密 
-- 最后表示客户端TLS协商没有问题了，加密开始 
+-  client key exchange现在轮到客户端来处理这些问题 ，客户端会生成第三个随机数 ，也叫预主密钥，用前面收到的来自服务端的公钥进行加密 ，并且把加密后的随机数 发送给服务端
+-  告诉服务器，往后的数据用商议好的加密套件（算法）和预主密钥来加密
+- 最后表示客户端TLS协商没有问题了，加密开始
 - 服务器表示准备好了 TLS握手成功 ，可以给数据加密然后交换了
 
 ![http-7](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/5/21/1638197d56d46dc7~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
@@ -354,9 +353,9 @@ jobs:
 
 ## 参考资料
 
-+ [掘金](https://juejin.cn/post/6955767063524671524?searchId=202403292004388762048C13277FA785C7)
++ [HTTPS](https://juejin.cn/post/6955767063524671524?searchId=202403292004388762048C13277FA785C7)
 + [阮一峰博客](https://zhuanlan.zhihu.com/p/55574439)
-+ [关于Github Actions](https://www.bilibili.com/video/BV1Ca411h7rx/?spm_id_from=333.999.0.0&vd_source=a7860af08b2a30a37222417e90daeb9a)
-+ [CI/CD](CI/CD)
++ [Github Actions](https://www.bilibili.com/video/BV1Ca411h7rx/?spm_id_from=333.999.0.0&vd_source=a7860af08b2a30a37222417e90daeb9a)
++ [CI/CD](https://www.bilibili.com/video/BV1Ha411d7cB/?spm_id_from=333.337.top_right_bar_window_history.content.click&vd_source=a7860af08b2a30a37222417e90daeb9a)
 + [手把手教你用 Github Actions 部署前端项目](https://juejin.cn/post/6950799922178310152?searchId=202404021736225B4DE3327603480712A6#heading-7)
 
