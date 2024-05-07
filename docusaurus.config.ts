@@ -8,7 +8,7 @@ import social from './data/social'
 const config: Config = {
   title: 'Jerry Yang的小站',
   url: 'https://ylc6223.site',
-  baseUrl: '/blog/',
+  baseUrl: './',
   favicon: 'img/favicon.ico',
   organizationName: 'Jerry Yang',
   projectName: 'blog',
