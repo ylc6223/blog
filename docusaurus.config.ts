@@ -8,10 +8,11 @@ import social from './data/social'
 const config: Config = {
   title: 'Jerry Yang的小站',
   url: 'https://ylc6223.site',
-  baseUrl: '/',
+  baseUrl: '/blog/',
   favicon: 'img/favicon.ico',
   organizationName: 'Jerry Yang',
   projectName: 'blog',
+  onBrokenLinks:'ignore',
   customFields: {
     bio: '道阻且长，行则将至',
     description:
