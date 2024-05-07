@@ -4,7 +4,22 @@ name: deploy-website
 # 当代码合并到master分支的时候，执行下列脚本
 on:
   push:
-    branches: [master]
+    branches: [ master ]
+
+# 允许你从 Actions 选项卡手动运行此工作流程
+workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+concurrency:
+  group: pages
+  cancel-in-progress: false
 # 任务
 jobs:
   # docs-build为任务id可随意定义
@@ -27,24 +42,40 @@ jobs:
         run: npm run build
 
       - name: build 成功通知
-        run: echo npm 构建成功，请访问 http://8.134.54.104
+        run: echo npm 构建成功，请访问 https://ylc6223.site
 
-      - name: copy file via ssh password
-        uses: easingthemes/ssh-deploy@main
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_KEY }}
-          ARGS: "-rlgoDzvc -i"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_HK }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: '/www/server/nginx/html/blog'
-          EXCLUDE: "/build/, /node_modules/"
-          SCRIPT_BEFORE: |
-            whoami
-            ls -al
-          SCRIPT_AFTER: |
-            whoami
-            ls -al
-            echo $RSYNC_STDOUT
+          path: build/
+  #      - name: copy file via ssh password
+  #        uses: easingthemes/ssh-deploy@main
+  #        with:
+  #          SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_KEY }}
+  #          ARGS: "-rlgoDzvc -i"
+  #          SOURCE: "build/"
+  #          REMOTE_HOST: ${{ secrets.REMOTE_HOST_HK }}
+  #          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+  #          TARGET: '/www/server/nginx/html/blog'
+  #          EXCLUDE: "/build/, /node_modules/"
+  #          SCRIPT_BEFORE: |
+  #            whoami
+  #            ls -al
+  #          SCRIPT_AFTER: |
+  #            whoami
+  #            ls -al
+  #            echo $RSYNC_STDOUT
 
+  # 部署工作
+  deploy:
+    environment: # 部署环境
+      name: github-pages # 部署到 GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }} # 部署后的 URL
+    needs: build # 郈接到构建工作
+    runs-on: ubuntu-latest # 运行环境
+    name: Deploy # 工作名称
+    steps: # 步骤
+      - name: Deploy to GitHub Pages # 部署到 GitHub Pages
+        id: deployment # 步骤 ID
+        uses: actions/deploy-pages@v4 # 使用的 action
 

@@ -7,10 +7,10 @@ import social from './data/social'
 
 const config: Config = {
   title: 'Jerry Yang的小站',
-  url: 'https://kuizuo.cn',
+  url: 'https://ylc6223.site',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'kuizuo',
+  organizationName: 'Jerry Yang',
   projectName: 'blog',
   customFields: {
     bio: '道阻且长，行则将至',
@@ -25,7 +25,7 @@ const config: Config = {
     metadata: [
       {
         name: 'keywords',
-        content: 'Jerry Yang, kuizuo',
+        content: 'Jerry Yang',
       },
       {
         name: 'keywords',
@@ -33,7 +33,7 @@ const config: Config = {
       },
       {
         name: 'keywords',
-        content: '编程爱好者, Web开发者, 写过爬虫, 学过逆向, 现在主攻ts全栈',
+        content: '编程爱好者, Web开发者',
       },
     ],
     docs: {
