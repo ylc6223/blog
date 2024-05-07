@@ -70,7 +70,7 @@ jobs:
     environment: # 部署环境
       name: github-pages # 部署到 GitHub Pages
       url: ${{ steps.deployment.outputs.page_url }} # 部署后的 URL
-    needs: build # 郈接到构建工作
+    needs: docs-build # 郈接到构建工作
     runs-on: ubuntu-latest # 运行环境
     name: Deploy # 工作名称
     steps: # 步骤
