@@ -108,7 +108,7 @@ const config: Config = {
             {
               html: `
                 <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
+                  <img src="/blog/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
                 <a/>
                 `,
             },
